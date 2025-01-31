@@ -1,0 +1,46 @@
+# node_modules
+node_modules/
+npm*
+yarn*
+
+# Environment Files
+.env
+.env.local
+*.env
+
+# IDE Specific Files
+.vscode/
+.idea/
+
+# Cache Directories
+.cache
+.unity/
+.DS_Store
+Thumbs.db
+
+# Build Artifacts
+dist/
+build/
+out/
+
+# Editor Auto-Generated Files
+.npmignore
+.yarn
+jspm_packages/
+
+# Testing Frameworks
+coverage/
+*.nycignore
+
+# Debug Logs
+npm-debug.json
+yarn-debug*.log*
+
+# Application-Specific
+.sass-cache/
+.DS_Store
+
+# Local Development
+tmp/
+temp/
+*.swp  # Swap files from editors likevim

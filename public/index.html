@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LM Studio Web UI</title>
+</head>
+<body>
+    <h1>Generate Content</h1>
+    <input type="text" id="promptInput" placeholder="Enter your prompt...">
+    <button onclick="generateContent()">Generate</button>
+    <div id="result"></div>
+
+    <script>
+        async function generateContent() {
+            const prompt = document.getElementById('promptInput').value;
+            try {
+                const response = await fetch('/generate', {
+                    method: 'GET',
+                    params: { prompt }
+                });
+                const data = await response.json();
+                document.getElementById('result').textContent = data.content;
+            } catch (error) {
+                console.error('Error:', error);
+                document.getElementById('result').textContent = 'Failed to generate content';
+            }
+        }
+    </script>
+</body>
+</html>
